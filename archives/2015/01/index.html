@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: マックブックオレ | benevolent0505のブログ</title>
+  <title>Archives: 2015/1 | benevolent0505のブログ</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="ブログ">
 <meta property="og:type" content="website">
 <meta property="og:title" content="benevolent0505のブログ">
-<meta property="og:url" content="http://benevolent0505.github.io/tags/マックブックオレ/">
+<meta property="og:url" content="http://benevolent0505.github.io/archives/2015/01/">
 <meta property="og:site_name" content="benevolent0505のブログ">
 <meta property="og:description" content="ブログ">
 <meta name="twitter:card" content="summary">
@@ -60,48 +60,41 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-macbookaulait" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-flycheck-disabled-elisp" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     
       <header class="article-header">
         
   
-    <a class="article-title" href="/2014/12/13/macbookaulait/">今年一番印象に残ったこと</a>
+    <a class="article-title" href="/2015/01/24/flycheck-disabled-elisp/">elispを開いたらクエスチョンマークが出てきたので消した</a>
   
 
       </header>
     
-    <time class="article-date" datetime="2014-12-13T00:33:54.000Z" itemprop="datePublished">12-13-2014</time>
+    <time class="article-date" datetime="2015-01-24T13:00:11.000Z" itemprop="datePublished">01-24-2015</time>
     
   </div>
   <div class="article-inner">
     <div class="article-entry" itemprop="articleBody">
       
-        <p>どうも、benevolent0505です。期待されているのかわからないけど一応残しておきます。</p>
-<h1 id="おもしろ情報です">おもしろ情報です</h1>
-<hr>
-<p><blockquote class="twitter-tweet" lang="ja"><p>おもしろ情報です <a href="http://t.co/sOZAwGBIUt" target="_blank" rel="external">pic.twitter.com/sOZAwGBIUt</a></p>&mdash; kakakaya2014 (@kakakaya) <a href="https://twitter.com/kakakaya/status/521503975112065024" target="_blank" rel="external">2014, 10月 13</a></blockquote></p>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <p>init.elを整理しようといつもどおりEmacsで開いたらコメント部分にクエスチョンマークと波線が出てきてた。</p>
+<p><img src="/2015/01/24/flycheck-disabled-elisp/screenshot.png" alt="" title="スクリーンショット"></p>
+<p>調べてみたらflycheckがelispをチェックしてこの部分まずくね？と言ってるらしい。flycheckを入れたばかりでどんな感じでエラーを教えてくれるのかを知らなかったために気づけなかった。はずかしい。</p>
+<p>ちなみに同様の問題で質問している人がstackoverflowに既にいた。<br><a href="http://stackoverflow.com/questions/15552349/flycheck-how-to-disable-warnning-while-edit-emacs-lisp-scripts" target="_blank" rel="external">flycheck — how to disable warnning while edit emacs lisp scripts?</a></p>
+<p>回答も来ていてその通りに以下を追加してみた。</p>
+<figure class="highlight [elisp]"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="list">(<span class="title">with-eval-after-load</span> <span class="quoted">'flycheck</span></span></div><div class="line">  <span class="list">(<span class="title">setq-default</span> flycheck-disabled-checkers <span class="quoted">'(emacs-lisp-checkdoc)</span>)</span>)</div></pre></td></tr></table></figure>
 
-<h1 id="Dentoo-LT8-5">Dentoo.LT8.5</h1>
-<hr>
-<script async class="speakerdeck-embed" data-id="7f603ab055d8013216390e87671be311" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
-
-<h1 id="Dentoo-LTで言い忘れていたこと">Dentoo.LTで言い忘れていたこと</h1>
-<hr>
-<p>未だに生協の紙パックの陳列棚に近づいていません。</p>
-<h1 id="おわりに">おわりに</h1>
-<hr>
-<p>Advent Calendarの記事にしても良かったんだけど微妙な気がしたので採用しませんでした。<br>neotasoさんみたいに紙パックカフェオレ飲料の食レポをMacbook Airの近くでやってトラウマを克服するみたいなものもさっき思いつきましたが、さすがに時間がありませんでした。</p>
-<p>最後に一言、PCの近くで設置が不安定な飲み物を飲むことはお勧めしません。今すぐPCの近くにある液体を遠ざけましょう。その時は突然やってきますよ。</p>
+<p>適応させると例のクエスチョンマークとかは消えていた。</p>
+<p><img src="/2015/01/24/flycheck-disabled-elisp/after.png" alt="" title="After"></p>
+<p>以上、こういった感じ。<br>試験勉強しないといけないのに何をやっているんだろう・・・。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://benevolent0505.github.io/2014/12/13/macbookaulait/" data-id="qhpxqcyvnbwck3ui" class="article-share-link">Share</a>
+      <a data-url="http://benevolent0505.github.io/2015/01/24/flycheck-disabled-elisp/" data-id="0jshfqbtwqibwico" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/マックブックオレ/">マックブックオレ</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/emacs/">emacs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/flycheck/">flycheck</a></li></ul>
 
     </footer>
   </div>
